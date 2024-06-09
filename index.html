@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Pump Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat">
+            <p>Welcome to the game! Click the button to start.</p>
+        </div>
+        <div class="button-container" id="button-container">
+            <button id="start-button">Start Game</button>
+        </div>
+        <div class="pump-interface" id="pump-interface" style="display: none;">
+            <div class="left-panel">
+                <div class="pressure-display">
+                    <div class="scale">
+                        <div class="bar" id="pressure-bar"></div>
+                    </div>
+                    <div class="scale-labels">
+                        <span>16</span>
+                        <span>12</span>
+                        <span>8</span>
+                        <span>4</span>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="buttons">
+                    <button class="control-button start-button">Start</button>
+                    <button class="control-button middle-button"></button>
+                    <button class="control-button stop-button">Stop</button>
+                </div>
+                <div class="rotary-control">
+                    <label for="output-pressure">Output Pressure</label>
+                    <input type="range" id="output-pressure" min="0" max="16" step="1">
+                </div>
+                <div class="bottom-buttons">
+                    <button class="control-button"></button>
+                    <button class="control-button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

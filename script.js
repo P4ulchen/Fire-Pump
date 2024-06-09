@@ -23,7 +23,7 @@ document.getElementById('start-button').addEventListener('click', function() {
 });
 
 document.getElementById('output-pressure').addEventListener('input', function() {
-    outputPressure = this.value;
+    outputPressure = parseFloat(this.value);
     updatePressureDisplay(outputPressure);
 });
 
@@ -52,7 +52,9 @@ function initializeVariables() {
 
 function updatePressureDisplay(pressure) {
     const pressureBar = document.getElementById('pressure-bar');
-    const maxBarHeight = 200; // Height of the pressure bar container in pixels
-    const newBarHeight = (pressure / 16) * maxBarHeight;
-    pressureBar.style.height = `${newBarHeight}px`;
+    const pressureText = document.getElementById('current-pressure');
+    const maxBarWidth = 200; // Width of the pressure bar container in pixels
+    const newBarWidth = (pressure / 16) * maxBarWidth;
+    pressureBar.style.width = `${newBarWidth}px`;
+    pressureText.textContent = pressure.toFixed(2) + ' bar';
 }

@@ -17,15 +17,12 @@
         <div class="pump-interface" id="pump-interface" style="display: none;">
             <div class="left-panel">
                 <div class="pressure-display">
+                    <div class="current-pressure" id="current-pressure">0.00 bar</div>
                     <div class="scale">
-                        <div class="bar" id="pressure-bar"></div>
-                    </div>
-                    <div class="scale-labels">
-                        <span>16</span>
-                        <span>12</span>
-                        <span>8</span>
-                        <span>4</span>
                         <span>0</span>
+                        <div class="bar" id="pressure-bar"></div>
+                        <span>bar</span>
+                        <span>16</span>
                     </div>
                 </div>
             </div>
@@ -37,7 +34,7 @@
                 </div>
                 <div class="rotary-control">
                     <label for="output-pressure">Output Pressure</label>
-                    <input type="range" id="output-pressure" min="0" max="16" step="1">
+                    <input type="range" id="output-pressure" min="0" max="16" step="0.01">
                 </div>
                 <div class="bottom-buttons">
                     <button class="control-button"></button>
